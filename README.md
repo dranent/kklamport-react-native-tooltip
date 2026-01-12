@@ -1,6 +1,6 @@
 @kklamport/react-native-tooltip 🚀
 
-![Tooltip Demo](./media/demo.gif)
+![Tooltip Demo](./assets/demo.gif)
 
 > **A lightweight, highly customizable, and animated tooltip component for React Native.**
 
