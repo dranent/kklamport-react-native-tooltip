@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dranent/-kklamport-react-native-tooltip.git"
+    "url": "git+https://github.com/dranent/kklamport-react-native-tooltip.git"
   },
   "author": "Mung <kklamport@gmail.com> (https://github.com/dranent)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dranent/-kklamport-react-native-tooltip/issues"
+    "url": "https://github.com/dranent/kklamport-react-native-tooltip/issues"
   },
-  "homepage": "https://github.com/dranent/-kklamport-react-native-tooltip#readme",
+  "homepage": "https://github.com/dranent/kklamport-react-native-tooltip#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
