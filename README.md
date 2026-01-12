@@ -1,4 +1,9 @@
 @kklamport/react-native-tooltip 🚀
+
+![Tooltip Demo](./media/demo.gif)
+
+> **A lightweight, highly customizable, and animated tooltip component for React Native.**
+
 A lightweight, highly customizable, and animated tooltip component for React Native.
 
 This library provides an easy way to show animated tooltips (speech bubbles) in your React Native applications. It features built-in dark mode support, an auto-hide timer, and complete theme customization.

@@ -5,19 +5,16 @@ import {
   StyleSheet,
   TouchableOpacity,
   useColorScheme,
-} from 'react-native'; // useColorScheme 추가
-// 💡 테스트를 위해 다시 상대 경로로 바꿔보세요 (확실한 반영을 위해)
+} from 'react-native';
 import { Tooltip } from '../../src/index';
 
 export default function App() {
   const [showTooltip, setShowTooltip] = useState(false);
 
-  // 앱 자체에서도 다크모드 여부를 감지합니다.
   const scheme = useColorScheme();
   const isDarkMode = scheme === 'dark';
 
   return (
-    // 배경색을 시스템 테마에 따라 변하게 합니다.
     <View
       style={[
         styles.container,
@@ -31,11 +28,10 @@ export default function App() {
           message="Hello world! ✨"
           position="top"
           autoHideDuration={10000}
-          // 여기서 지정한 색상들이 다크모드일 때 잘 나오는지 확인!
           backgroundColor="#6200EE"
           textColor="#FFFFFF"
-          darkBackgroundColor="#FFFFFF" // 다크모드일 땐 반대로 흰 배경에
-          darkTextColor="#000000" // 검은 글씨로 테스트해봅시다.
+          darkBackgroundColor="#FFFFFF"
+          darkTextColor="#000000"
           showArrow={true}
           showCloseButton={true}
         >
@@ -56,7 +52,9 @@ export default function App() {
         <Text
           style={[styles.guideText, { color: isDarkMode ? '#AAA' : '#666' }]}
         >
-          {isDarkMode ? '현재 다크 모드입니다 🌙' : '현재 라이트 모드입니다 ☀️'}
+          {isDarkMode
+            ? 'currently in dark mode 🌙'
+            : 'currently in light mode ☀️'}
         </Text>
       </View>
     </View>
