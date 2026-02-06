@@ -1,6 +1,6 @@
 {
   "name": "@kklamport/react-native-tooltip",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A customizable tooltip for React Native with dark mode support",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",

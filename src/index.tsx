@@ -6,13 +6,17 @@ import {
   Animated,
   useColorScheme,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+
 
 export interface TooltipProps {
   isVisible: boolean;
   message: string;
   children: React.ReactNode;
   position?: 'top' | 'bottom';
+  align?: 'left' | 'center' | 'right';
   backgroundColor?: string;
   textColor?: string;
   darkBackgroundColor?: string;
@@ -28,6 +32,7 @@ const Tooltip = ({
   message,
   children,
   position = 'top',
+  align = 'center',
   backgroundColor,
   textColor,
   darkBackgroundColor,
@@ -92,6 +97,14 @@ const Tooltip = ({
     };
   }, [isVisible, autoHideDuration, handleClose, opacity, translateY]);
 
+  const getAlignmentStyle = () => {
+    switch (align) {
+      case 'left': return { left: 0, alignItems: 'flex-start' as const };
+      case 'right': return { right: 0, alignItems: 'flex-end' as const };
+      default: return { alignSelf: 'center' as const, alignItems: 'center' as const };
+    }
+  };
+
   return (
     <View style={styles.container}>
       {children}
@@ -100,6 +113,7 @@ const Tooltip = ({
           style={[
             styles.tooltipContainer,
             position === 'top' ? { bottom: '110%' } : { top: '110%' },
+            getAlignmentStyle(),
             { opacity, transform: [{ translateY }] },
           ]}
         >
@@ -128,6 +142,7 @@ const Tooltip = ({
               style={[
                 styles.arrow,
                 position === 'top' ? styles.arrowBottom : styles.arrowTop,
+                align === 'left' ? { left: 15 } : align === 'right' ? { right: 15 } : { alignSelf: 'center' },
                 {
                   borderTopColor:
                     position === 'top' ? finalBgColor : 'transparent',
@@ -147,21 +162,24 @@ const Tooltip = ({
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    zIndex: 999,
   },
   tooltipContainer: {
     position: 'absolute',
-    alignItems: 'center',
-    width: 250,
+    maxWidth: SCREEN_WIDTH * 0.7,
+    minWidth: 150,
     zIndex: 9999,
   },
-  bubble: {
+bubble: {
     paddingVertical: 10,
     paddingHorizontal: 16,
-    borderRadius: 8,
-    minHeight: 36,
+    borderRadius: 12,
     justifyContent: 'center',
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
   },
   contentRow: {
     flexDirection: 'row',
