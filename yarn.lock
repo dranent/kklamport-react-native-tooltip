@@ -2962,6 +2962,38 @@ __metadata:
   languageName: node
   linkType: soft
 
+"@kklamport/react-native-tooltip@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@kklamport/react-native-tooltip@workspace:."
+  dependencies:
+    "@commitlint/config-conventional": "npm:^19.8.1"
+    "@eslint/compat": "npm:^1.3.2"
+    "@eslint/eslintrc": "npm:^3.3.1"
+    "@eslint/js": "npm:^9.35.0"
+    "@react-native/babel-preset": "npm:0.83.0"
+    "@react-native/eslint-config": "npm:0.83.0"
+    "@release-it/conventional-changelog": "npm:^10.0.1"
+    "@types/jest": "npm:^29.5.14"
+    "@types/react": "npm:^19.1.12"
+    commitlint: "npm:^19.8.1"
+    del-cli: "npm:^6.0.0"
+    eslint: "npm:^9.35.0"
+    eslint-config-prettier: "npm:^10.1.8"
+    eslint-plugin-prettier: "npm:^5.5.4"
+    jest: "npm:^29.7.0"
+    lefthook: "npm:^2.0.3"
+    prettier: "npm:^3.0.0"
+    react: "npm:19.1.0"
+    react-native: "npm:0.81.5"
+    react-native-builder-bob: "npm:^0.40.17"
+    release-it: "npm:^19.0.4"
+    typescript: "npm:^5.9.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
   resolution: "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1"
@@ -10971,38 +11003,6 @@ __metadata:
     react-native-safe-area-context: "npm:~5.6.0"
     react-native-screens: "npm:~4.16.0"
     react-native-web: "npm:~0.21.0"
-  languageName: unknown
-  linkType: soft
-
-"react-native-tooltip@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-native-tooltip@workspace:."
-  dependencies:
-    "@commitlint/config-conventional": "npm:^19.8.1"
-    "@eslint/compat": "npm:^1.3.2"
-    "@eslint/eslintrc": "npm:^3.3.1"
-    "@eslint/js": "npm:^9.35.0"
-    "@react-native/babel-preset": "npm:0.83.0"
-    "@react-native/eslint-config": "npm:0.83.0"
-    "@release-it/conventional-changelog": "npm:^10.0.1"
-    "@types/jest": "npm:^29.5.14"
-    "@types/react": "npm:^19.1.12"
-    commitlint: "npm:^19.8.1"
-    del-cli: "npm:^6.0.0"
-    eslint: "npm:^9.35.0"
-    eslint-config-prettier: "npm:^10.1.8"
-    eslint-plugin-prettier: "npm:^5.5.4"
-    jest: "npm:^29.7.0"
-    lefthook: "npm:^2.0.3"
-    prettier: "npm:^3.0.0"
-    react: "npm:19.1.0"
-    react-native: "npm:0.81.5"
-    react-native-builder-bob: "npm:^0.40.17"
-    release-it: "npm:^19.0.4"
-    typescript: "npm:^5.9.2"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
   languageName: unknown
   linkType: soft
 

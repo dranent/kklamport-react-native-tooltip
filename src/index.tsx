@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-
 export interface TooltipProps {
   isVisible: boolean;
   message: string;
@@ -99,9 +98,12 @@ const Tooltip = ({
 
   const getAlignmentStyle = () => {
     switch (align) {
-      case 'left': return { left: 0, alignItems: 'flex-start' as const };
-      case 'right': return { right: 0, alignItems: 'flex-end' as const };
-      default: return { alignSelf: 'center' as const, alignItems: 'center' as const };
+      case 'left':
+        return { left: 0, alignItems: 'flex-start' as const };
+      case 'right':
+        return { right: 0, alignItems: 'flex-end' as const };
+      default:
+        return { alignSelf: 'center' as const, alignItems: 'center' as const };
     }
   };
 
@@ -142,7 +144,11 @@ const Tooltip = ({
               style={[
                 styles.arrow,
                 position === 'top' ? styles.arrowBottom : styles.arrowTop,
-                align === 'left' ? { left: 15 } : align === 'right' ? { right: 15 } : { alignSelf: 'center' },
+                align === 'left'
+                  ? { left: 15 }
+                  : align === 'right'
+                    ? { right: 15 }
+                    : { alignSelf: 'center' },
                 {
                   borderTopColor:
                     position === 'top' ? finalBgColor : 'transparent',
@@ -170,7 +176,7 @@ const styles = StyleSheet.create({
     minWidth: 150,
     zIndex: 9999,
   },
-bubble: {
+  bubble: {
     paddingVertical: 10,
     paddingHorizontal: 16,
     borderRadius: 12,
